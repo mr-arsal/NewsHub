@@ -4,7 +4,8 @@ import Navbar from './Components/Navbar'
 import React, { useState } from 'react'
 import NewsComponent from './Components/NewsComponent';
 import {
-  BrowserRouter,
+  HashRouter,
+  // BrowserRouter,
   Routes,
   Route,
   // Link,
@@ -19,7 +20,7 @@ function App() {
      
 
       <div>
-        <BrowserRouter>
+        <HashRouter>
           <LoadingBar
             color='#f11946'
             progress={progress}
@@ -34,7 +35,7 @@ function App() {
             <Route path="/sports" element={<NewsComponent setProgress={setProgress}  key="sports" pageSize={12} country='us' category='sports' />} />
             <Route path="/technology" element={<NewsComponent setProgress={setProgress}  key="technology" pageSize={12} country='us' category='technology' />} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </div>
 
 

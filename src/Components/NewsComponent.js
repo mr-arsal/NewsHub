@@ -21,6 +21,7 @@ const NewsComponent = (props)=> {
     setLoading(true);
     let data = await fetch(url);
     let parsedData = await data.json();
+    console.log(parsedData)
     setArticles(parsedData.articles);
     settotalResults(parsedData.totalResults);
     setLoading(false);
